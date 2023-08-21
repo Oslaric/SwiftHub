@@ -35,6 +35,9 @@ class RepositoriesViewModel: ViewModel, ViewModelType {
         let imageUrl: Driver<URL?>
         let textDidBeginEditing: Driver<Void>
         let dismissKeyboard: Driver<Void>
+        /*
+            构造并传递一个 ViewModel 
+         */
         let repositorySelected: Driver<RepositoryViewModel>
     }
 

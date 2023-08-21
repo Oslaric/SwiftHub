@@ -247,6 +247,7 @@
 		A0E2B0972108B024000DA282 /* RepositoryForks.json in Resources */ = {isa = PBXBuildFile; fileRef = A0E2B0962108B024000DA282 /* RepositoryForks.json */; };
 		A0ED264820F76A65004E8137 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ED264720F76A65004E8137 /* LoginViewModel.swift */; };
 		A0ED264A20F76A7D004E8137 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ED264920F76A7D004E8137 /* LoginViewController.swift */; };
+		B5B3BC1A2A2382FA00DF29BD /* document in Resources */ = {isa = PBXBuildFile; fileRef = B5B3BC192A2382FA00DF29BD /* document */; };
 		C762C6231E1D414B00C09EBD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762C6221E1D414B00C09EBD /* R.generated.swift */; };
 		C762C6251E1D417C00C09EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C762C6241E1D417C00C09EBD /* Assets.xcassets */; };
 		C762C65F1E1D559000C09EBD /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762C6501E1D559000C09EBD /* BarButtonItem.swift */; };
@@ -572,6 +573,7 @@
 		A0ED264720F76A65004E8137 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0ED264920F76A7D004E8137 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB30C56D3A94C8B749FE468F /* Pods-SwiftHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftHubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftHubUITests/Pods-SwiftHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B3BC192A2382FA00DF29BD /* document */ = {isa = PBXFileReference; lastKnownFileType = folder; path = document; sourceTree = "<group>"; };
 		C762C6221E1D414B00C09EBD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C762C6241E1D417C00C09EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C762C6501E1D559000C09EBD /* BarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonItem.swift; sourceTree = "<group>"; };
@@ -1086,6 +1088,7 @@
 		A09499491E1D1CB500EFDE29 = {
 			isa = PBXGroup;
 			children = (
+				B5B3BC192A2382FA00DF29BD /* document */,
 				A09499541E1D1CB600EFDE29 /* SwiftHub */,
 				A09499691E1D1CB700EFDE29 /* SwiftHubTests */,
 				A09499741E1D1CB700EFDE29 /* SwiftHubUITests */,
@@ -1569,6 +1572,7 @@
 				A0E2B0932108AFF0000DA282 /* RepositoryWatchers.json in Resources */,
 				072BD79A225FD50400E6C580 /* RepositoryRelease.json in Resources */,
 				074DBBEE2448A0480062B35F /* RepositoryNumberOfLines.json in Resources */,
+				B5B3BC1A2A2382FA00DF29BD /* document in Resources */,
 				A07DB584223FC02E000E3312 /* User.graphql in Resources */,
 				07241D1921B1768E00F800BD /* CommitCell.xib in Resources */,
 				073A1F792233F2F000D6F487 /* Search.graphql in Resources */,
@@ -1856,7 +1860,7 @@
 			);
 			name = R.swift;
 			outputPaths = (
-				"$SRCROOT/SwiftHub/Resources/R.generated.swift",
+				$SRCROOT/SwiftHub/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

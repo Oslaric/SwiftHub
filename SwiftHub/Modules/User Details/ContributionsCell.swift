@@ -50,7 +50,7 @@ class ContributionsCell: DefaultTableViewCell {
         cellDisposeBag = DisposeBag()
 
         viewModel.contributionCalendar.bind(to: contributionsView.calendar).disposed(by: cellDisposeBag)
-
+        
         viewModel.contributionCalendar.map { $0 == nil }.bind(to: contributionsView.rx.isHidden).disposed(by: cellDisposeBag)
     }
 }

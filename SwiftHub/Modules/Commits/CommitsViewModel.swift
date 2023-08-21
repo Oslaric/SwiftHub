@@ -66,7 +66,11 @@ class CommitsViewModel: ViewModel, ViewModelType {
         }
 
         let userDetails = userSelected.asDriver(onErrorJustReturn: User())
-            .map({ (user) -> UserViewModel in
+            .map({ (user) -> UserViewModel in // 这个写法挺好的 , 增强了 给 compiler 的 提示 ,让 compiler 轻松知道返回的类型
+                /*
+                    ViewModel 之间看样子不可避免的存在依赖了
+                    在 ViewModelA 构造并返回 viewModelB 
+                 */
                 let viewModel = UserViewModel(user: user, provider: self.provider)
                 return viewModel
             })

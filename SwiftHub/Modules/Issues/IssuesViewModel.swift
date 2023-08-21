@@ -24,6 +24,9 @@ class IssuesViewModel: ViewModel, ViewModelType {
         let navigationTitle: Driver<String>
         let imageUrl: Driver<URL?>
         let items: BehaviorRelay<[IssueCellViewModel]>
+        /*
+            ViewModel 里面,可以返回 childViewModel
+         */
         let userSelected: Driver<UserViewModel>
         let issueSelected: Driver<IssueViewModel>
     }
@@ -32,6 +35,12 @@ class IssuesViewModel: ViewModel, ViewModelType {
     let segment = BehaviorRelay<IssueSegments>(value: .open)
     let userSelected = PublishSubject<User>()
 
+    
+    /*
+        我们看到 边界思维(通过 api 定义) 的体现
+        ViewModel 需要依赖的 service 服务 ,都以 Api protocl 协议的方式进行提供 ,而不是具体的 实现
+            这样的好处是 隐藏了 service 的实现 
+     */
     init(repository: Repository, provider: SwiftHubAPI) {
         self.repository = BehaviorRelay(value: repository)
         super.init(provider: provider)
@@ -41,6 +50,10 @@ class IssuesViewModel: ViewModel, ViewModelType {
     }
 
     func transform(input: Input) -> Output {
+        /*
+            把 elements 放在函数里面 ,而是 类里面 ,就避免使用到 self [weak self] , 有这样的好处 ,但带来了什么坏处呢 ?
+         
+         */
         let elements = BehaviorRelay<[IssueCellViewModel]>(value: [])
 
         input.segmentSelection.bind(to: segment).disposed(by: rx.disposeBag)

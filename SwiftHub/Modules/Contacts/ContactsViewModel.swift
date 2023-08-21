@@ -48,6 +48,9 @@ class ContactsViewModel: ViewModel, ViewModelType {
                 })
             }
         }).subscribe(onNext: { (items) in
+            /*
+                如果 elements 是 永远都不会结束的 ,那么 就不要把 complete 和 error 这类 event 传给 element ,而是只传 next
+             */
             elements.accept(items)
         }, onError: { (error) in
             logError(error.localizedDescription)

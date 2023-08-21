@@ -11,6 +11,12 @@ import RxSwift
 import RxCocoa
 import BonMot
 
+/*
+    CellViewModel 也有类似 ViewModel 的  input/output 沟通通道
+    比如 hidesStarButton 作为 input 被 loggedIn 驱动 , 作为 output ,驱动 RepositoryCell 的属性变化
+    
+    神奇的是 : loggedIn 竟然是一个 全局变量
+ */
 class RepositoryCellViewModel: DefaultTableViewCellViewModel {
 
     let starring = BehaviorRelay<Bool>(value: false)
